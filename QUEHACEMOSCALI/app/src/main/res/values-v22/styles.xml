@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+        <item name="android:colorAccent">@color/accent</item>
+    </style>
+
+    <color name="accent">#82B1FF</color>
+</resources>
