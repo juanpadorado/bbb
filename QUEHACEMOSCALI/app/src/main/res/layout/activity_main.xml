@@ -23,7 +23,7 @@
                 android:id="@android:id/tabs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tabStripEnabled="true" />
+                android:tabStripEnabled="true"/>
 
             <FrameLayout
                 android:id="@android:id/tabcontent"
@@ -40,7 +40,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="#F44336"
-                        android:drawableLeft="@drawable/glass2"
+                        android:drawableLeft="@drawable/drink"
                         android:gravity="center_vertical"
                         android:paddingLeft="20dp"
                         android:text="@string/rumba"
@@ -60,9 +60,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="#FFBA00"
-                        android:drawableLeft="@drawable/spoon"
+                        android:drawableLeft="@drawable/ic_launcher"
                         android:gravity="center_vertical"
-                        android:paddingLeft="20dp"
+                        android:paddingLeft="8dp"
                         android:text="@string/arte"
                         android:textSize="25sp" />
 
@@ -80,9 +80,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="#00BFA5"
-                        android:drawableLeft="@drawable/spoon"
+                        android:drawableLeft="@drawable/hotel"
                         android:gravity="center_vertical"
-                        android:paddingLeft="20dp"
+                        android:paddingLeft="27dp"
                         android:text="@string/hoteleria"
                         android:textSize="25sp" />
 
@@ -91,10 +91,7 @@
                         android:layout_height="wrap_content"
                         android:background="#8D6E63"
                         android:drawableLeft="@drawable/camera"
-                        android:elegantTextHeight="false"
                         android:gravity="center_vertical"
-
-                        android:nestedScrollingEnabled="false"
                         android:paddingLeft="20dp"
                         android:text="@string/entretenimiento"
                         android:textSize="25sp" />
@@ -103,7 +100,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="#FF4081"
-                        android:drawableLeft="@drawable/spoon"
+                        android:drawableLeft="@drawable/de_visita"
                         android:gravity="center_vertical"
                         android:paddingLeft="20dp"
                         android:text="@string/visita"
@@ -113,7 +110,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="#7C4DFF"
-                        android:drawableLeft="@drawable/spoon"
+                        android:drawableLeft="@drawable/recomendados"
                         android:gravity="center_vertical"
                         android:paddingLeft="20dp"
                         android:text="@string/recomendados"
