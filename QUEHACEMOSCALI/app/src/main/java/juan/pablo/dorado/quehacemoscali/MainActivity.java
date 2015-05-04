@@ -1,50 +1,59 @@
 package juan.pablo.dorado.quehacemoscali;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTabHost;
 import android.support.v4.content.ContextCompat;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TabHost;
-import android.widget.TabHost.TabSpec;
+//import android.widget.TabHost;
+//import android.widget.TabHost.TabSpec;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends FragmentActivity {
 
-    private TabHost tabHost;
-    private TabSpec pestania;
-
+    private FragmentTabHost tabHost;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
-        tabHost = (TabHost) findViewById(R.id.tabHost);
-        tabHost.setup();
+        tabHost = (FragmentTabHost) findViewById(android.R.id.tabhost);
+        tabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
+
+        tabHost.addTab(tabHost.newTabSpec("Tab1").setIndicator("", ContextCompat.getDrawable(this, R.drawable.drawer)),
+                Tab1Fragment.class, null);
+
+        tabHost.addTab(tabHost.newTabSpec("Tab2").setIndicator("", ContextCompat.getDrawable(this, R.drawable.news)),
+                Tab2Fragment.class, null);
+
+        tabHost.addTab(tabHost.newTabSpec("Tab2").setIndicator("", ContextCompat.getDrawable(this, R.drawable.paperplane)),
+                Tab3Fragment.class, null);
 
         //Tab1
-        pestania = tabHost.newTabSpec("Tab1");
-        pestania.setContent(R.id.tab1);
-        pestania.setIndicator("", ContextCompat.getDrawable(this, R.drawable.drawer));
+        //pestania = tabHost.newTabSpec("Tab1");
+        //  pestania.setContent(R.id.tab1);
+        // pestania.setIndicator("", ContextCompat.getDrawable(this, R.drawable.drawer));
 
-        tabHost.addTab(pestania);
+        //tabHost.addTab(pestania);
 
         //Tab2
-        pestania = tabHost.newTabSpec("Tab2");
-        pestania.setContent(R.id.tab2);
-        pestania.setIndicator("", ContextCompat.getDrawable(this, R.drawable.news));
-
-        tabHost.addTab(pestania);
-
-        //Tab3
-        pestania = tabHost.newTabSpec("Tab2");
-        pestania.setContent(R.id.tab3);
-        pestania.setIndicator("", ContextCompat.getDrawable(this, R.drawable.paperplane));
-
-        tabHost.addTab(pestania);
-
-        tabHost.setCurrentTab(0);
+        // pestania = tabHost.newTabSpec("Tab2");
+        // pestania.setContent(R.id.tab2);
+        // pestania.setIndicator("", ContextCompat.getDrawable(this, R.drawable.news));
+//
+        // tabHost.addTab(pestania);
+//
+        // //Tab3
+        // pestania = tabHost.newTabSpec("Tab2");
+        // pestania.setContent(R.id.tab3);
+        // pestania.setIndicator("", ContextCompat.getDrawable(this, R.drawable.paperplane));
+//
+        // tabHost.addTab(pestania);
+//
+        // tabHost.setCurrentTab(0);
 
     }
 
