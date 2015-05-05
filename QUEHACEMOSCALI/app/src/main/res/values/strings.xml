@@ -11,8 +11,12 @@
     <string name="visita">De Visita</string>
     <string name="recomendados">Recomendados</string>
 
-    <string name="categorias">Categorias</string>
-    <string name="noticias">Noticias</string>
-    <string name="recomiendanos">Recomiendanos</string>
+    <string name="nota">Nota: Esta seccion esta pensada para que los usuarios nos recomienden los
+                        sitios que no estan en la aplicacion.</string>
+    <string name="nombre">Nombre del Lugar*:</string>
+    <string name="direccion">Direccion*:</string>
+    <string name="telefono">Telefono:</string>
+    <string name="descripcion">Descripcion:</string>
+    <string name="recomendar">Recomendar</string>
 
 </resources>

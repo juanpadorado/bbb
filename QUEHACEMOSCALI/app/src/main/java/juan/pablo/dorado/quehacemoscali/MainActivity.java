@@ -23,13 +23,13 @@ public class MainActivity extends FragmentActivity {
         tabHost = (FragmentTabHost) findViewById(android.R.id.tabhost);
         tabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
 
-        tabHost.addTab(tabHost.newTabSpec("Tab1").setIndicator("", ContextCompat.getDrawable(this, R.drawable.drawer)),
+        tabHost.addTab(tabHost.newTabSpec("Tab1").setIndicator("", ContextCompat.getDrawable(this, R.drawable.archive)),
                 Tab1Fragment.class, null);
 
         tabHost.addTab(tabHost.newTabSpec("Tab2").setIndicator("", ContextCompat.getDrawable(this, R.drawable.news)),
                 Tab2Fragment.class, null);
 
-        tabHost.addTab(tabHost.newTabSpec("Tab2").setIndicator("", ContextCompat.getDrawable(this, R.drawable.paperplane)),
+        tabHost.addTab(tabHost.newTabSpec("Tab3").setIndicator("", ContextCompat.getDrawable(this, R.drawable.square)),
                 Tab3Fragment.class, null);
 
         //Tab1
