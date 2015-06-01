@@ -1,34 +1,194 @@
-<android.support.v4.app.FragmentTabHost xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@android:id/tabhost"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFF">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFF"
+    tools:context=".MainActivity">
 
-    <LinearLayout
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:minHeight="?android:attr/actionBarSize" />
+
+    <TextView
+        android:id="@+id/txtVwPico_placa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:text="@string/pico_placa"
+        android:textColor="#5C5C5C"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/txtVwHoy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtVwPico_placa"
+        android:layout_centerHorizontal="true"
+        android:text="@string/hoy"
+        android:textColor="#949494"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/imgVwCarroPart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@id/txtVwPico_placa"
+        android:src="@drawable/directions" />
+
+    <TextView
+        android:id="@+id/txtVwParticular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgVwCarroPart"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_horizontal"
+        android:text="@string/particular"
+        android:textColor="#949494"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/txtVwHoraPart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtVwParticular"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_horizontal"
+        android:text="@string/hora_particular"
+        android:textColor="#949494"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/txtVwNumPart1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtVwHoy"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@id/txtVwHoraPart"
+        android:background="#808080"
+        android:text="5"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txtVwNumPart2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtVwNumPart1"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@id/txtVwHoraPart"
+        android:background="#808080"
+        android:text="5"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txtVwY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtVwHoy"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:text="@string/y"
+        android:textColor="#949494"
+        android:textSize="17sp" />
+
+    <ImageView
+        android:id="@+id/imgVwCarroPub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/txtVwPico_placa"
+        android:src="@drawable/cab" />
+
+    <TextView
+        android:id="@+id/txtVwPublico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/imgVwCarroPub"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_horizontal"
+        android:text="@string/publico"
+        android:textColor="#949494"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/txtVwHoraPub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/txtVwPublico"
+        android:layout_marginRight="10dp"
+        android:gravity="center_horizontal"
+        android:text="@string/hora_publico"
+        android:textColor="#949494"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/txtVwNumPub1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtVwHoy"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@id/txtVwHoraPub"
+        android:background="#808080"
+        android:text="5"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txtVwNumPub2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtVwNumPub1"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@id/txtVwHoraPub"
+        android:background="#808080"
+        android:text="5"
+        android:textSize="20sp" />
+
+    <android.support.v4.app.FragmentTabHost xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@android:id/tabhost"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_below="@id/txtVwHoraPart"
+        android:background="#FFF">
 
-        <TabWidget
-            android:id="@android:id/tabs"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:orientation="horizontal"
-            android:tabStripEnabled="true" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <FrameLayout
-            android:id="@android:id/tabcontent"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="0" />
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:orientation="horizontal"
+                android:tabStripEnabled="true" />
 
-        <FrameLayout
-            android:id="@+id/realtabcontent"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0" />
 
-    </LinearLayout>
-</android.support.v4.app.FragmentTabHost>
 
+            <FrameLayout
+                android:id="@+id/realtabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </android.support.v4.app.FragmentTabHost>
+</RelativeLayout>

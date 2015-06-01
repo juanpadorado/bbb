@@ -6,15 +6,6 @@
     android:orientation="vertical"
     tools:context=".DeviceFragment">
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="@string/nota"
-        android:textColor="#9F9F9F"
-        android:textSize="20sp" />
-
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
@@ -27,15 +18,23 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/nota"
+                android:textColor="#9F9F9F"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/nombre"
                 android:textColor="#9F9F9F"
-                android:textSize="20sp" />
+                android:textSize="17sp" />
 
             <EditText
                 android:id="@+id/edtTxtNombre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
+                android:layout_margin="10dp"
                 android:background="@drawable/shape"
                 android:textColor="#9F9F9F" />
 
@@ -44,13 +43,13 @@
                 android:layout_height="wrap_content"
                 android:text="@string/direccion"
                 android:textColor="#9F9F9F"
-                android:textSize="20sp" />
+                android:textSize="17sp" />
 
             <EditText
                 android:id="@+id/edtTxtDireccion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
+                android:layout_margin="10dp"
                 android:background="@drawable/shape"
                 android:textColor="#9F9F9F" />
 
@@ -59,13 +58,13 @@
                 android:layout_height="wrap_content"
                 android:text="@string/telefono"
                 android:textColor="#9F9F9F"
-                android:textSize="20sp" />
+                android:textSize="17sp" />
 
             <EditText
                 android:id="@+id/edtTxtTelefono"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
+                android:layout_margin="10dp"
                 android:background="@drawable/shape"
                 android:textColor="#9F9F9F" />
 
@@ -74,13 +73,13 @@
                 android:layout_height="wrap_content"
                 android:text="@string/descripcion"
                 android:textColor="#9F9F9F"
-                android:textSize="20sp" />
+                android:textSize="17sp" />
 
             <EditText
                 android:id="@+id/edtTxtDescripcion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
+                android:layout_margin="10dp"
                 android:background="@drawable/shape"
                 android:textColor="#9F9F9F" />
 
@@ -88,11 +87,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginBottom="30dp"
+                android:layout_marginBottom="15dp"
                 android:background="#1D89E4"
                 android:padding="10dp"
                 android:text="@string/recomendar"
-                android:textColor="#FFF"/>
+                android:textColor="#FFF" />
 
         </LinearLayout>
     </ScrollView>

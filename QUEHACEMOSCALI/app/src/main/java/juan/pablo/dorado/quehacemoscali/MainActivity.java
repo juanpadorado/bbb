@@ -1,16 +1,19 @@
 package juan.pablo.dorado.quehacemoscali;
 
+import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTabHost;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-//import android.widget.TabHost;
-//import android.widget.TabHost.TabSpec;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Toast;
 
 
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends ActionBarActivity {
 
     private FragmentTabHost tabHost;
 
@@ -19,6 +22,21 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("");
+        toolbar.setLogo(R.mipmap.ic_launcher);
+
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+        }
+
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            window.setStatusBarColor(getResources().getColor(R.color.primary_dark));
+        }
 
         tabHost = (FragmentTabHost) findViewById(android.R.id.tabhost);
         tabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
@@ -31,29 +49,6 @@ public class MainActivity extends FragmentActivity {
 
         tabHost.addTab(tabHost.newTabSpec("Tab3").setIndicator("", ContextCompat.getDrawable(this, R.drawable.square)),
                 Tab3Fragment.class, null);
-
-        //Tab1
-        //pestania = tabHost.newTabSpec("Tab1");
-        //  pestania.setContent(R.id.tab1);
-        // pestania.setIndicator("", ContextCompat.getDrawable(this, R.drawable.drawer));
-
-        //tabHost.addTab(pestania);
-
-        //Tab2
-        // pestania = tabHost.newTabSpec("Tab2");
-        // pestania.setContent(R.id.tab2);
-        // pestania.setIndicator("", ContextCompat.getDrawable(this, R.drawable.news));
-//
-        // tabHost.addTab(pestania);
-//
-        // //Tab3
-        // pestania = tabHost.newTabSpec("Tab2");
-        // pestania.setContent(R.id.tab3);
-        // pestania.setIndicator("", ContextCompat.getDrawable(this, R.drawable.paperplane));
-//
-        // tabHost.addTab(pestania);
-//
-        // tabHost.setCurrentTab(0);
 
     }
 
@@ -74,6 +69,13 @@ public class MainActivity extends FragmentActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Toast.makeText(this, "SETTINGS", Toast.LENGTH_LONG).show();
+            return true;
+        } else if (id == R.id.action_home) {
+            Toast.makeText(this, "ADD", Toast.LENGTH_LONG).show();
+            return true;
+        } else if (id == R.id.action_exit) {
+            Toast.makeText(this, "Exit", Toast.LENGTH_LONG).show();
             return true;
         }
 

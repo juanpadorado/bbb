@@ -3,6 +3,9 @@
 
     <string name="rumba">Rumba y Musica</string>
     <string name="action_settings">Settings</string>
+    <string name="action_exit">Salir</string>
+    <string name="action_home">Home</string>
+    <string name="action_search">Buscar</string>
     <string name="gastronomia">Gastronomia</string>
     <string name="arte">Arte y Cultura</string>
     <string name="deportes">Deportes</string>
@@ -10,6 +13,7 @@
     <string name="entretenimiento">Entretenimiento</string>
     <string name="visita">De Visita</string>
     <string name="recomendados">Recomendados</string>
+    <string name="no_items">No hay elementos</string>
 
     <string name="nota">Nota: Esta seccion esta pensada para que los usuarios nos recomienden los
                         sitios que no estan en la aplicacion.</string>
@@ -18,5 +22,12 @@
     <string name="telefono">Telefono:</string>
     <string name="descripcion">Descripcion:</string>
     <string name="recomendar">Recomendar</string>
+    <string name="pico_placa">Pico y Placa</string>
+    <string name="hoy">Hoy</string>
+    <string name="particular">Vehiculos\nParticulares</string>
+    <string name="hora_particular">7:00 - 10:00 am y\n5:00 - 8:00 pm</string>
+    <string name="publico">Vehiculos\nPublicos</string>
+    <string name="hora_publico">5:00 am - 10:00 pm</string>
+    <string name="y">Y</string>
 
 </resources>
