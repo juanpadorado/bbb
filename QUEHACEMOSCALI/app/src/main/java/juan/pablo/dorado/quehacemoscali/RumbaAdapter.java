@@ -18,6 +18,7 @@ public class RumbaAdapter extends BaseAdapter {
     private final Activity actividad;
     private final Vector<String> listaTit;
     private final Vector<String> listaSubT;
+    int i=0;
 
     public RumbaAdapter(Activity actividad, Vector<String> lista, Vector<String> listaSubT) {
         super();
@@ -46,12 +47,14 @@ public class RumbaAdapter extends BaseAdapter {
         LayoutInflater inflater = actividad.getLayoutInflater();
         View view = inflater.inflate(R.layout.layout_element_list, null, true);
         TextView textView = (TextView) view.findViewById(R.id.titulo);
+        TextView textView2 = (TextView) view.findViewById(R.id.subtitulo);
         textView.setText(listaTit.elementAt(position));
+        textView2.setText(listaSubT.elementAt(position));
         ImageView imageView = (ImageView) view.findViewById(R.id.icono);
 
-        switch (Math.round((float) Math.random() * 5)) {
+        switch (i) {
             case 0:
-                imageView.setImageResource(R.mipmap.ic_launcher);
+                imageView.setImageResource(R.drawable.logo_jala);
                 break;
             case 1:
                 imageView.setImageResource(R.mipmap.ic_launcher);
@@ -69,6 +72,8 @@ public class RumbaAdapter extends BaseAdapter {
                 imageView.setImageResource(R.mipmap.ic_launcher);
                 break;
         }
+
+        i++;
 
         return view;
     }

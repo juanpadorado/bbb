@@ -29,6 +29,12 @@
     <string name="publico">Vehiculos\nPublicos</string>
     <string name="hora_publico">5:00 am - 10:00 pm</string>
     <string name="y">Y</string>
-    <string name="jala">Jala Jala</string>
-
+    <string name="jala">Jala Jala Club</string>
+    <string name="jala_desc_ab">Por fin lo que Cali esperaba en el sector de menga una rumba realmente...</string>
+    <string name="jala_desc">Por fin lo que Cali esperaba en el sector de menga una rumba realmente
+        diferente jala jala club discoteca. Jala jala cuenta con unas instalaciones inigualables con
+        la última tecnología en sonido y luces robóticas, 2 pantalla de video y el mejor show laser de
+        colombia. Tarima exclusiva para que veas los mejores artistas en acción.</string>
+    <string name="info_jala">INFO 6904481 - 6904482</string>
+    <string name="direccion_jala">Dirección: Calle 10 A 36 A-154, Yumbo, Valle del Cauca</string>
 </resources>
