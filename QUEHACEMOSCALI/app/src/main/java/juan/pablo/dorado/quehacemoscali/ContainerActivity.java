@@ -1,29 +1,27 @@
 package juan.pablo.dorado.quehacemoscali;
 
-import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.FragmentTabHost;
-import android.support.v4.content.ContextCompat;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+/**
+ * Created by Juan Pablo on 08/06/2015.
+ */
+public class ContainerActivity extends ActionBarActivity {
 
-public class MainActivity extends ActionBarActivity {
-
-    private FragmentTabHost tabHost;
+    Fragment rumbaFrag, gastroFrag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_container);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("");
@@ -40,33 +38,29 @@ public class MainActivity extends ActionBarActivity {
             window.setStatusBarColor(getResources().getColor(R.color.primary_dark));
         }
 
-        tabHost = (FragmentTabHost) findViewById(android.R.id.tabhost);
-        tabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
+        rumbaFrag = new RumbaFragment();
+        gastroFrag = new GastroFragment();
 
-        tabHost.addTab(tabHost.newTabSpec("Tab1").setIndicator("", ContextCompat.getDrawable(this, R.drawable.archive)),
-                Tab1Fragment.class, null);
+        Bundle bundle = getIntent().getExtras();
 
-        tabHost.addTab(tabHost.newTabSpec("Tab2").setIndicator("", ContextCompat.getDrawable(this, R.drawable.news)),
-                Tab2Fragment.class, null);
-
-        tabHost.addTab(tabHost.newTabSpec("Tab3").setIndicator("", ContextCompat.getDrawable(this, R.drawable.square)),
-                Tab3Fragment.class, null);
-
+        switch (bundle.getInt("boton")) {
+            case 0:
+                getSupportFragmentManager().beginTransaction().add(R.id.containerFrag, rumbaFrag, "listaRumba").commit();
+                break;
+            case 1:
+                getSupportFragmentManager().beginTransaction().add(R.id.containerFrag, gastroFrag, "listaGastro").commit();
+                break;
+        }
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
@@ -82,17 +76,5 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public void onClickRumba(View view) {
-        Intent intent = new Intent(this, ContainerActivity.class);
-        intent.putExtra("boton", 0);
-        startActivity(intent);
-    }
-
-    public void onClickGastro(View view) {
-        Intent intent = new Intent(this, ContainerActivity.class);
-        intent.putExtra("boton", 1);
-        startActivity(intent);
     }
 }

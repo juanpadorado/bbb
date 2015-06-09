@@ -22,6 +22,7 @@
                 android:drawableLeft="@drawable/drink"
                 android:drawablePadding="10dp"
                 android:gravity="center_vertical"
+                android:onClick="onClickRumba"
                 android:paddingLeft="15dp"
                 android:text="@string/rumba"
                 android:textSize="25sp" />
@@ -33,6 +34,7 @@
                 android:drawableLeft="@drawable/spoon"
                 android:drawablePadding="10dp"
                 android:gravity="center_vertical"
+                android:onClick="onClickGastro"
                 android:paddingLeft="15dp"
                 android:text="@string/gastronomia"
                 android:textSize="25sp" />
