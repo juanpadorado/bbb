@@ -11,7 +11,7 @@
 
     <item
         android:id="@+id/action_map"
-        android:icon="@android:drawable/ic_dialog_map"
+        android:icon="@drawable/ubicacion"
         android:orderInCategory="90"
         android:title="@string/action_map"
         app:showAsAction="always" />

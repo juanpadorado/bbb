@@ -59,7 +59,12 @@ public class JalaActivity extends ActionBarActivity {
             startActivity(intent);
             return true;
         } else if (id == R.id.action_map) {
-
+            Intent intent = new Intent(this, MapsActivity.class);
+            intent.putExtra("lat",3.497031);
+            intent.putExtra("lng",-76.522271);
+            intent.putExtra("titulo","Jala Jala Club");
+            intent.putExtra("info","Yumbo");
+            startActivity(intent);
             return true;
         }
 

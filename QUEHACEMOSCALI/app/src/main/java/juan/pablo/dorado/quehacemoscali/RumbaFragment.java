@@ -15,11 +15,11 @@ import java.util.Vector;
 /**
  * Created by Juan Pablo on 08/06/2015.
  */
-public class ControlFragment extends Fragment {
+public class RumbaFragment extends Fragment {
 
     ListView lista;
 
-    public ControlFragment() {
+    public RumbaFragment() {
     }
 
     @Override
@@ -33,7 +33,7 @@ public class ControlFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         lista = (ListView) getView().findViewById(R.id.listViewBu);
-        lista.setAdapter(new ControlAdapter(getActivity(), listaTitulos(), listaSubTitulos()));
+        lista.setAdapter(new RumbaAdapter(getActivity(), listaTitulos(), listaSubTitulos()));
 
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

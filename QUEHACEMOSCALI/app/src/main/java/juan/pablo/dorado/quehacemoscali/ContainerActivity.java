@@ -39,7 +39,7 @@ public class ContainerActivity extends ActionBarActivity {
             window.setStatusBarColor(getResources().getColor(R.color.primary_dark));
         }
 
-        rumbaFrag = new ControlFragment();
+        rumbaFrag = new RumbaFragment();
         gastroFrag = new GastroFragment();
 
         Bundle bundle = getIntent().getExtras();
