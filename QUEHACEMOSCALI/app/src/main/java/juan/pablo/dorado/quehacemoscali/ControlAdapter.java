@@ -13,14 +13,14 @@ import java.util.Vector;
 /**
  * Created by Juan Pablo on 08/06/2015.
  */
-public class RumbaAdapter extends BaseAdapter {
+public class ControlAdapter extends BaseAdapter {
 
     private final Activity actividad;
     private final Vector<String> listaTit;
     private final Vector<String> listaSubT;
     int i=0;
 
-    public RumbaAdapter(Activity actividad, Vector<String> lista, Vector<String> listaSubT) {
+    public ControlAdapter(Activity actividad, Vector<String> lista, Vector<String> listaSubT) {
         super();
         this.actividad = actividad;
         this.listaTit = lista;

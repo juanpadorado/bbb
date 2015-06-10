@@ -1,11 +1,14 @@
 package juan.pablo.dorado.quehacemoscali;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
@@ -20,7 +23,7 @@ public class JalaActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_jalajala);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarJala);
         toolbar.setTitle("");
         toolbar.setLogo(R.mipmap.ic_launcher);
 
@@ -39,7 +42,7 @@ public class JalaActivity extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu2, menu);
         return true;
     }
 
@@ -51,17 +54,26 @@ public class JalaActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            Toast.makeText(this, "SETTINGS", Toast.LENGTH_LONG).show();
+        if (id == R.id.action_home) {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
             return true;
-        } else if (id == R.id.action_home) {
-            Toast.makeText(this, "ADD", Toast.LENGTH_LONG).show();
-            return true;
-        } else if (id == R.id.action_exit) {
-            Toast.makeText(this, "Exit", Toast.LENGTH_LONG).show();
+        } else if (id == R.id.action_map) {
+
             return true;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void call(View view) {
+        Intent llamar = new Intent(Intent.ACTION_DIAL);
+        llamar.setData(Uri.parse("tel:" + getString(R.string.tel_jala)));
+        startActivity(llamar);
+    }
+
+    public void navegar(View view) {
+        Intent web = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.jalajalaclub.com/"));
+        startActivity(web);
     }
 }

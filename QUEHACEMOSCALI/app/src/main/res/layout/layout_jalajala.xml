@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/toolbarJala"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/primary"
@@ -16,48 +16,81 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/imgVwjala"
                 android:layout_width="wrap_content"
                 android:layout_height="100dp"
-                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
                 android:layout_margin="10dp"
                 android:src="@drawable/logo_jala" />
 
             <TextView
+                android:id="@+id/txtVwDescJala"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/imgVwjala"
                 android:layout_margin="10dp"
                 android:text="@string/jala_desc"
                 android:textColor="#9F9F9F"
                 android:textSize="15sp" />
 
             <TextView
+                android:id="@+id/txtVwDescJala2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/txtVwDescJala"
                 android:layout_margin="10dp"
                 android:text="@string/info_jala"
                 android:textColor="#9F9F9F"
                 android:textSize="15sp" />
 
-            <TextView
+            <ImageButton
+                android:id="@+id/imgBtnCall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/txtVwDescJala"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="6dp"
+                android:layout_toRightOf="@id/txtVwDescJala2"
+                android:background="#ffefe7e7"
+                android:onClick="call"
+                android:src="@drawable/phone" />
+
+            <ImageButton
+                android:id="@+id/imgBtnGlobal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtVwDescJala"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="6dp"
+                android:layout_toRightOf="@id/imgBtnCall"
+                android:background="#ffefe7e7"
+                android:onClick="navegar"
+                android:src="@drawable/world" />
+
+            <TextView
+                android:id="@+id/txtVwDescJala3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtVwDescJala2"
                 android:layout_margin="10dp"
                 android:text="@string/direccion_jala"
                 android:textColor="#9F9F9F"
                 android:textSize="15sp" />
 
             <ImageView
+                android:id="@+id/imgVwjala2"
                 android:layout_width="wrap_content"
                 android:layout_height="230dp"
+                android:layout_below="@id/txtVwDescJala3"
                 android:layout_margin="10dp"
                 android:src="@drawable/jala_imag" />
-        </LinearLayout>
+        </RelativeLayout>
     </ScrollView>
 
 </LinearLayout>

@@ -70,14 +70,15 @@ public class MainActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_info) {
             Toast.makeText(this, "SETTINGS", Toast.LENGTH_LONG).show();
             return true;
         } else if (id == R.id.action_home) {
-            Toast.makeText(this, "ADD", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
             return true;
         } else if (id == R.id.action_exit) {
-            Toast.makeText(this, "Exit", Toast.LENGTH_LONG).show();
+            finish();
             return true;
         }
 

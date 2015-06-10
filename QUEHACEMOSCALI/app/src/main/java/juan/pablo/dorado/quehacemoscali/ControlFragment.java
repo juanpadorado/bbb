@@ -15,11 +15,11 @@ import java.util.Vector;
 /**
  * Created by Juan Pablo on 08/06/2015.
  */
-public class RumbaFragment extends Fragment {
+public class ControlFragment extends Fragment {
 
     ListView lista;
 
-    public RumbaFragment() {
+    public ControlFragment() {
     }
 
     @Override
@@ -33,13 +33,15 @@ public class RumbaFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         lista = (ListView) getView().findViewById(R.id.listViewBu);
-        lista.setAdapter(new RumbaAdapter(getActivity(), listaTitulos(), listaSubTitulos()));
+        lista.setAdapter(new ControlAdapter(getActivity(), listaTitulos(), listaSubTitulos()));
 
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getActivity(), JalaActivity.class);
-                startActivity(intent);
+                if (position == 0) {
+                    Intent intent = new Intent(getActivity(), JalaActivity.class);
+                    startActivity(intent);
+                }
             }
         });
     }
@@ -57,7 +59,8 @@ public class RumbaFragment extends Fragment {
     public Vector<String> listaSubTitulos() {
         String[] elementos;
         Vector<String> VectorElementos;
-        elementos = new String[]{getString(R.string.jala_desc_ab), "Elemento 2", "Elemento 3", "Elemento 4", "Elemento 5"};
+        elementos = new String[]{getString(R.string.jala_desc_ab),
+                "Elemento 2", "Elemento 3", "Elemento 4", "Elemento 5"};
 
         VectorElementos = new Vector<String>(Arrays.asList(elementos));
 
